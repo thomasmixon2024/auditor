@@ -1,0 +1,10 @@
+[2026-07-31T10:15:14.214536] Audit started: bundle=C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\after\audit_2026-07-31_10-15-14, base_path=C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed, severity=all, ci_mode=False, fix_mode=False
+[2026-07-31T10:15:14.214536] Discovering projects in C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed
+[2026-07-31T10:15:14.215544] Found projects: ['C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-31_10-15-01\\fixed\\Link2MP4']
+[2026-07-31T10:15:14.215544] Scanning project: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4
+[2026-07-31T10:15:14.215544] Running PSScriptAnalyzer on C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4
+[2026-07-31T10:15:16.317087] PSScriptAnalyzer completed
+[2026-07-31T10:15:18.423595] Discovering projects in C:\Users\Thomas\Desktop\auditor\target_project
+[2026-07-31T10:15:18.423595] Found projects: ['C:\\Users\\Thomas\\Desktop\\auditor\\target_project\\Link2MP4']
+[2026-07-31T10:15:20.548750] Discovering projects in C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed
+[2026-07-31T10:15:20.549736] Found projects: ['C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-31_10-15-01\\fixed\\Link2MP4']

@@ -1,0 +1,99 @@
+Here are several ready-to-run PowerShell (Windows) examples for common auditor workflows. Pick the one that matches what you want to do.
+
+1) Quick helper (recommended, from repo root)
+- Description: runs the repository helper that creates venv, installs deps and runs the audit.
+```powershell
+Set-Location 'C:\Users\Thomas\Desktop\auditor'
+.\run_audit.ps1
+```
+
+2) One-liner to launch the helper from anywhere
+```powershell
+& "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -File 'C:\Users\Thomas\Desktop\auditor\run_audit.ps1'
+```
+
+3) Manual venv setup + run (step-by-step)
+```powershell
+Set-Location 'C:\Users\Thomas\Desktop\auditor'
+python -m venv .venv
+. .\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python .\scripts\run_all.py --path .\target_project
+```
+
+4) Run audit in CI mode (exit non-zero on findings)
+```powershell
+Set-Location 'C:\Users\Thomas\Desktop\auditor'
+.\.venv\Scripts\Activate.ps1
+python .\scripts\run_all.py --path .\target_project --ci --severity high
+```
+
+5) Run audit with auto-fixers (--fix)
+- WARNING: modifies files; review changes in git or stash first.
+```powershell
+Set-Location 'C:\Users\Thomas\Desktop\auditor'
+.\.venv\Scripts\Activate.ps1
+python .\scripts\run_all.py --path .\target_project --fix
+```
+
+6) Install PSScriptAnalyzer (PowerShell Core) for PS scanning
+```powershell
+# run only if pwsh (PowerShell Core) is installed
+pwsh -NoProfile -Command "Install-Module PSScriptAnalyzer -Scope CurrentUser -Force"
+```
+
+7) Start the report server (foreground)
+```powershell
+Set-Location 'C:\Users\Thomas\Desktop\auditor'
+$env:AUDITOR_API_TOKEN = [System.Guid]::NewGuid().ToString()
+python server.py
+# Then open http://127.0.0.1:5000/latest/dashboard
+```
+
+8) Start the API with uvicorn (separate host/port)
+```powershell
+Set-Location 'C:\Users\Thomas\Desktop\auditor'
+$env:AUDITOR_API_TOKEN = [System.Guid]::NewGuid().ToString()
+python -m uvicorn api:app --host 127.0.0.1 --port 8000
+```
+
+9) Trigger an audit via API (curl.exe to avoid PowerShell alias)
+```powershell
+# Using curl.exe
+curl.exe -X POST http://127.0.0.1:8000/audit `
+  -H "X-Auditor-Token: $env:AUDITOR_API_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d '{"severity":"all","ci":true}'
+
+# Or use PowerShell's Invoke-RestMethod
+Invoke-RestMethod -Uri 'http://127.0.0.1:8000/audit' -Method Post `
+  -Headers @{ 'X-Auditor-Token' = $env:AUDITOR_API_TOKEN } `
+  -Body '{"severity":"all","ci":true}' -ContentType 'application/json'
+```
+
+10) Run server in background (separate process)
+```powershell
+Set-Location 'C:\Users\Thomas\Desktop\auditor'
+Start-Process -FilePath 'python' -ArgumentList 'server.py' -WorkingDirectory 'C:\Users\Thomas\Desktop\auditor' -NoNewWindow
+```
+
+11) Run audit only against the example Link2MP4 target
+```powershell
+Set-Location 'C:\Users\Thomas\Desktop\auditor'
+.\.venv\Scripts\Activate.ps1
+python .\scripts\run_all.py --path .\target_project\Link2MP4
+```
+
+12) Show latest log files (quick inspection)
+```powershell
+Get-ChildItem 'C:\Users\Thomas\Desktop\auditor\logs' -File -Recurse |
+  Sort-Object LastWriteTime -Descending |
+  Select-Object -First 10 FullName,LastWriteTime
+```
+
+If you'd like, I can:
+- produce a single runnable script file (run_full_audit.ps1) that contains your preferred flow, or
+- tailor a one-liner for CI (GitHub Actions/Azure Pipelines) compatible usage.
+
+(I'm an AI assistant using Copilot CLI runtime in VS Code.)

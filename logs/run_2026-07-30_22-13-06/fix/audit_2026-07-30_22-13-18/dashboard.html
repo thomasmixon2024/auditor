@@ -1,0 +1,2604 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Audit Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body { font-family: Arial, sans-serif; background: #202124; color: #e8eaed; margin: 0; padding: 20px; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+th, td { border: 1px solid #5f6368; padding: 8px; word-break: break-all; }
+.section { background: #303134; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+pre { background: #1e1f21; padding: 10px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; word-break: break-word; }
+</style>
+</head>
+<body>
+
+<h1>Audit Dashboard</h1>
+
+<h2>Visual Summary</h2>
+<canvas id="projectChart" height="120"></canvas>
+
+<h2>Summary Table</h2>
+<table>
+<tr><th>Project</th><th>Ruff</th><th>Bandit</th><th>Semgrep</th></tr>
+<tr><td>C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-13-06\fixed\Link2MP4</td><td>0</td><td>0</td><td>0</td></tr></table><div class='section'><h2>C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-13-06\fixed\Link2MP4</h2><h3>PSSCRIPTANALYZER</h3><pre>[
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Rotate-Logs&#x27; uses an unapproved verb.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Rotate-Logs {\n&quot;,
+        &quot;Offset&quot;: 369
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 21,
+        &quot;Line&quot;: &quot;function Rotate-Logs {\n&quot;,
+        &quot;Offset&quot;: 380
+      },
+      &quot;StartLineNumber&quot;: 15,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 15,
+      &quot;EndColumnNumber&quot;: 21,
+      &quot;Text&quot;: &quot;Rotate-Logs&quot;,
+      &quot;StartOffset&quot;: 369,
+      &quot;EndOffset&quot;: 380
+    },
+    &quot;RuleName&quot;: &quot;PSUseApprovedVerbs&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;CrashLogs.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 15,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Rotate-Logs&#x27; uses a plural noun. A singular noun should be used instead.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Rotate-Logs {\n&quot;,
+        &quot;Offset&quot;: 369
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 21,
+        &quot;Line&quot;: &quot;function Rotate-Logs {\n&quot;,
+        &quot;Offset&quot;: 380
+      },
+      &quot;StartLineNumber&quot;: 15,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 15,
+      &quot;EndColumnNumber&quot;: 21,
+      &quot;Text&quot;: &quot;Rotate-Logs&quot;,
+      &quot;StartOffset&quot;: 369,
+      &quot;EndOffset&quot;: 380
+    },
+    &quot;RuleName&quot;: &quot;PSUseSingularNouns&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;CrashLogs.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;Rotate-Logs&quot;,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;Description&quot;: &quot;Singularized correction of &#x27;Rotate-Logs&#x27;&quot;,
+        &quot;StartLineNumber&quot;: 15,
+        &quot;StartColumnNumber&quot;: 10,
+        &quot;EndLineNumber&quot;: 15,
+        &quot;EndColumnNumber&quot;: 21,
+        &quot;Text&quot;: &quot;Rotate-Log&quot;,
+        &quot;Lines&quot;: [
+          &quot;Rotate-Log&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 15,
+          &quot;Column&quot;: 10
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 15,
+          &quot;Column&quot;: 21
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 15,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Write-Log&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 26,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Write-Log {\n&quot;,
+        &quot;Offset&quot;: 800
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 26,
+        &quot;ColumnNumber&quot;: 19,
+        &quot;Line&quot;: &quot;function Write-Log {\n&quot;,
+        &quot;Offset&quot;: 809
+      },
+      &quot;StartLineNumber&quot;: 26,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 26,
+      &quot;EndColumnNumber&quot;: 19,
+      &quot;Text&quot;: &quot;Write-Log&quot;,
+      &quot;StartOffset&quot;: 800,
+      &quot;EndOffset&quot;: 809
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;CrashLogs.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 26,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 26,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER Source\r\nParameter description\r\n\r\n.PARAMETER Message\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Source&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Message&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 26,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 26,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 26,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Get-CrashLogDirectory&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 34,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Get-CrashLogDirectory { return $script:CrashDir }\n&quot;,
+        &quot;Offset&quot;: 1099
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 34,
+        &quot;ColumnNumber&quot;: 31,
+        &quot;Line&quot;: &quot;function Get-CrashLogDirectory { return $script:CrashDir }\n&quot;,
+        &quot;Offset&quot;: 1120
+      },
+      &quot;StartLineNumber&quot;: 34,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 34,
+      &quot;EndColumnNumber&quot;: 31,
+      &quot;Text&quot;: &quot;Get-CrashLogDirectory&quot;,
+      &quot;StartOffset&quot;: 1099,
+      &quot;EndOffset&quot;: 1120
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;CrashLogs.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 34,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 34,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 34,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 34,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 34,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;&#x27;Write-Log&#x27; is a cmdlet that is included with PowerShell (version core-6.1.0-windows) whose definition should not be overridden&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 26,
+        &quot;ColumnNumber&quot;: 1,
+        &quot;Line&quot;: &quot;function Write-Log {\n&quot;,
+        &quot;Offset&quot;: 791
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+        &quot;LineNumber&quot;: 32,
+        &quot;ColumnNumber&quot;: 2,
+        &quot;Line&quot;: &quot;}\n&quot;,
+        &quot;Offset&quot;: 1088
+      },
+      &quot;StartLineNumber&quot;: 26,
+      &quot;StartColumnNumber&quot;: 1,
+      &quot;EndLineNumber&quot;: 32,
+      &quot;EndColumnNumber&quot;: 2,
+      &quot;Text&quot;: &quot;function Write-Log {\n    param([string]$Source, [string]$Message)\n    Rotate-Logs\n    $timestamp = Get-Date -Format \&quot;yyyy-MM-dd HH:mm:ss\&quot;\n    $file = Join-Path $script:CrashDir (\&quot;log_\&quot; + (Get-Date -Format \&quot;yyyyMMdd\&quot;) + \&quot;.txt\&quot;)\n    Add-Content -Path $file -Value \&quot;[$timestamp] [$Source] $Message\&quot;\n}&quot;,
+      &quot;StartOffset&quot;: 791,
+      &quot;EndOffset&quot;: 1088
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidOverwritingBuiltInCmdlets&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;CrashLogs.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\CrashLogs.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 26,
+    &quot;Column&quot;: 1
+  },
+  {
+    &quot;Message&quot;: &quot;Function &#x27;Set-DownloadState&#x27; has verb that could change system state. Therefore, the function has to support &#x27;ShouldProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 7,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Set-DownloadState {\n&quot;,
+        &quot;Offset&quot;: 260
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 7,
+        &quot;ColumnNumber&quot;: 27,
+        &quot;Line&quot;: &quot;function Set-DownloadState {\n&quot;,
+        &quot;Offset&quot;: 277
+      },
+      &quot;StartLineNumber&quot;: 7,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 7,
+      &quot;EndColumnNumber&quot;: 27,
+      &quot;Text&quot;: &quot;Set-DownloadState&quot;,
+      &quot;StartOffset&quot;: 260,
+      &quot;EndOffset&quot;: 277
+    },
+    &quot;RuleName&quot;: &quot;PSUseShouldProcessForStateChangingFunctions&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Downloader.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 7,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;Function &#x27;Start-Download&#x27; has verb that could change system state. Therefore, the function has to support &#x27;ShouldProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Start-Download {\n&quot;,
+        &quot;Offset&quot;: 529
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 24,
+        &quot;Line&quot;: &quot;function Start-Download {\n&quot;,
+        &quot;Offset&quot;: 543
+      },
+      &quot;StartLineNumber&quot;: 15,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 15,
+      &quot;EndColumnNumber&quot;: 24,
+      &quot;Text&quot;: &quot;Start-Download&quot;,
+      &quot;StartOffset&quot;: 529,
+      &quot;EndOffset&quot;: 543
+    },
+    &quot;RuleName&quot;: &quot;PSUseShouldProcessForStateChangingFunctions&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Downloader.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 15,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;Function &#x27;Stop-DownloadProcess&#x27; has verb that could change system state. Therefore, the function has to support &#x27;ShouldProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 76,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Stop-DownloadProcess {\n&quot;,
+        &quot;Offset&quot;: 3827
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 76,
+        &quot;ColumnNumber&quot;: 30,
+        &quot;Line&quot;: &quot;function Stop-DownloadProcess {\n&quot;,
+        &quot;Offset&quot;: 3847
+      },
+      &quot;StartLineNumber&quot;: 76,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 76,
+      &quot;EndColumnNumber&quot;: 30,
+      &quot;Text&quot;: &quot;Stop-DownloadProcess&quot;,
+      &quot;StartOffset&quot;: 3827,
+      &quot;EndOffset&quot;: 3847
+    },
+    &quot;RuleName&quot;: &quot;PSUseShouldProcessForStateChangingFunctions&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Downloader.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 76,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Start-Download&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Start-Download {\n&quot;,
+        &quot;Offset&quot;: 529
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 24,
+        &quot;Line&quot;: &quot;function Start-Download {\n&quot;,
+        &quot;Offset&quot;: 543
+      },
+      &quot;StartLineNumber&quot;: 15,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 15,
+      &quot;EndColumnNumber&quot;: 24,
+      &quot;Text&quot;: &quot;Start-Download&quot;,
+      &quot;StartOffset&quot;: 529,
+      &quot;EndOffset&quot;: 543
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;Downloader.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 15,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 15,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER UI\r\nParameter description\r\n\r\n.PARAMETER URL\r\nParameter description\r\n\r\n.PARAMETER Folder\r\nParameter description\r\n\r\n.PARAMETER Form\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER UI&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER URL&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Folder&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Form&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 15,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 15,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 15,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Stop-DownloadProcess&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 76,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Stop-DownloadProcess {\n&quot;,
+        &quot;Offset&quot;: 3827
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;LineNumber&quot;: 76,
+        &quot;ColumnNumber&quot;: 30,
+        &quot;Line&quot;: &quot;function Stop-DownloadProcess {\n&quot;,
+        &quot;Offset&quot;: 3847
+      },
+      &quot;StartLineNumber&quot;: 76,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 76,
+      &quot;EndColumnNumber&quot;: 30,
+      &quot;Text&quot;: &quot;Stop-DownloadProcess&quot;,
+      &quot;StartOffset&quot;: 3827,
+      &quot;EndOffset&quot;: 3847
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;Downloader.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Downloader.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 76,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 76,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER UI\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER UI&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 76,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 76,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 76,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Ensure-TargetDirectory&#x27; uses an unapproved verb.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+        &quot;LineNumber&quot;: 13,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Ensure-TargetDirectory {\n&quot;,
+        &quot;Offset&quot;: 424
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+        &quot;LineNumber&quot;: 13,
+        &quot;ColumnNumber&quot;: 32,
+        &quot;Line&quot;: &quot;function Ensure-TargetDirectory {\n&quot;,
+        &quot;Offset&quot;: 446
+      },
+      &quot;StartLineNumber&quot;: 13,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 13,
+      &quot;EndColumnNumber&quot;: 32,
+      &quot;Text&quot;: &quot;Ensure-TargetDirectory&quot;,
+      &quot;StartOffset&quot;: 424,
+      &quot;EndOffset&quot;: 446
+    },
+    &quot;RuleName&quot;: &quot;PSUseApprovedVerbs&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderConfig.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 13,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Get-YtDlpPath&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Get-YtDlpPath {\n&quot;,
+        &quot;Offset&quot;: 68
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 23,
+        &quot;Line&quot;: &quot;function Get-YtDlpPath {\n&quot;,
+        &quot;Offset&quot;: 81
+      },
+      &quot;StartLineNumber&quot;: 3,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 3,
+      &quot;EndColumnNumber&quot;: 23,
+      &quot;Text&quot;: &quot;Get-YtDlpPath&quot;,
+      &quot;StartOffset&quot;: 68,
+      &quot;EndOffset&quot;: 81
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;DownloaderConfig.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 3,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 3,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 3,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Ensure-TargetDirectory&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+        &quot;LineNumber&quot;: 13,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Ensure-TargetDirectory {\n&quot;,
+        &quot;Offset&quot;: 424
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+        &quot;LineNumber&quot;: 13,
+        &quot;ColumnNumber&quot;: 32,
+        &quot;Line&quot;: &quot;function Ensure-TargetDirectory {\n&quot;,
+        &quot;Offset&quot;: 446
+      },
+      &quot;StartLineNumber&quot;: 13,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 13,
+      &quot;EndColumnNumber&quot;: 32,
+      &quot;Text&quot;: &quot;Ensure-TargetDirectory&quot;,
+      &quot;StartOffset&quot;: 424,
+      &quot;EndOffset&quot;: 446
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;DownloaderConfig.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderConfig.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 13,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 13,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER Path\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Path&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 13,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 13,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 13,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:ActiveDownloadProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 4,
+        &quot;ColumnNumber&quot;: 5,
+        &quot;Line&quot;: &quot;    $global:ActiveDownloadProcess = $null\n&quot;,
+        &quot;Offset&quot;: 148
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 4,
+        &quot;ColumnNumber&quot;: 34,
+        &quot;Line&quot;: &quot;    $global:ActiveDownloadProcess = $null\n&quot;,
+        &quot;Offset&quot;: 177
+      },
+      &quot;StartLineNumber&quot;: 4,
+      &quot;StartColumnNumber&quot;: 5,
+      &quot;EndLineNumber&quot;: 4,
+      &quot;EndColumnNumber&quot;: 34,
+      &quot;Text&quot;: &quot;$global:ActiveDownloadProcess&quot;,
+      &quot;StartOffset&quot;: 148,
+      &quot;EndOffset&quot;: 177
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderProcess.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:ActiveDownloadProcess&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 4,
+    &quot;Column&quot;: 5
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:ActiveDownloadProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 29,
+        &quot;ColumnNumber&quot;: 19,
+        &quot;Line&quot;: &quot;    if ($null -ne $global:ActiveDownloadProcess -and -not $global:ActiveDownloadProcess.HasExited) {\n&quot;,
+        &quot;Offset&quot;: 1085
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 29,
+        &quot;ColumnNumber&quot;: 48,
+        &quot;Line&quot;: &quot;    if ($null -ne $global:ActiveDownloadProcess -and -not $global:ActiveDownloadProcess.HasExited) {\n&quot;,
+        &quot;Offset&quot;: 1114
+      },
+      &quot;StartLineNumber&quot;: 29,
+      &quot;StartColumnNumber&quot;: 19,
+      &quot;EndLineNumber&quot;: 29,
+      &quot;EndColumnNumber&quot;: 48,
+      &quot;Text&quot;: &quot;$global:ActiveDownloadProcess&quot;,
+      &quot;StartOffset&quot;: 1085,
+      &quot;EndOffset&quot;: 1114
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderProcess.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:ActiveDownloadProcess&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 29,
+    &quot;Column&quot;: 19
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:ActiveDownloadProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 29,
+        &quot;ColumnNumber&quot;: 59,
+        &quot;Line&quot;: &quot;    if ($null -ne $global:ActiveDownloadProcess -and -not $global:ActiveDownloadProcess.HasExited) {\n&quot;,
+        &quot;Offset&quot;: 1125
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 29,
+        &quot;ColumnNumber&quot;: 88,
+        &quot;Line&quot;: &quot;    if ($null -ne $global:ActiveDownloadProcess -and -not $global:ActiveDownloadProcess.HasExited) {\n&quot;,
+        &quot;Offset&quot;: 1154
+      },
+      &quot;StartLineNumber&quot;: 29,
+      &quot;StartColumnNumber&quot;: 59,
+      &quot;EndLineNumber&quot;: 29,
+      &quot;EndColumnNumber&quot;: 88,
+      &quot;Text&quot;: &quot;$global:ActiveDownloadProcess&quot;,
+      &quot;StartOffset&quot;: 1125,
+      &quot;EndOffset&quot;: 1154
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderProcess.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:ActiveDownloadProcess&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 29,
+    &quot;Column&quot;: 59
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:ActiveDownloadProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 83,
+        &quot;Line&quot;: &quot;            Write-Log -Source \&quot;DownloaderProcess\&quot; -Message \&quot;Killing process PID $($global:ActiveDownloadProcess.Id)\&quot;\n&quot;,
+        &quot;Offset&quot;: 1264
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 112,
+        &quot;Line&quot;: &quot;            Write-Log -Source \&quot;DownloaderProcess\&quot; -Message \&quot;Killing process PID $($global:ActiveDownloadProcess.Id)\&quot;\n&quot;,
+        &quot;Offset&quot;: 1293
+      },
+      &quot;StartLineNumber&quot;: 31,
+      &quot;StartColumnNumber&quot;: 83,
+      &quot;EndLineNumber&quot;: 31,
+      &quot;EndColumnNumber&quot;: 112,
+      &quot;Text&quot;: &quot;$global:ActiveDownloadProcess&quot;,
+      &quot;StartOffset&quot;: 1264,
+      &quot;EndOffset&quot;: 1293
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderProcess.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:ActiveDownloadProcess&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 31,
+    &quot;Column&quot;: 83
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:ActiveDownloadProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 32,
+        &quot;ColumnNumber&quot;: 13,
+        &quot;Line&quot;: &quot;            $global:ActiveDownloadProcess.Kill()\n&quot;,
+        &quot;Offset&quot;: 1311
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 32,
+        &quot;ColumnNumber&quot;: 42,
+        &quot;Line&quot;: &quot;            $global:ActiveDownloadProcess.Kill()\n&quot;,
+        &quot;Offset&quot;: 1340
+      },
+      &quot;StartLineNumber&quot;: 32,
+      &quot;StartColumnNumber&quot;: 13,
+      &quot;EndLineNumber&quot;: 32,
+      &quot;EndColumnNumber&quot;: 42,
+      &quot;Text&quot;: &quot;$global:ActiveDownloadProcess&quot;,
+      &quot;StartOffset&quot;: 1311,
+      &quot;EndOffset&quot;: 1340
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderProcess.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:ActiveDownloadProcess&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 32,
+    &quot;Column&quot;: 13
+  },
+  {
+    &quot;Message&quot;: &quot;Function &#x27;New-YtDlpProcess&#x27; has verb that could change system state. Therefore, the function has to support &#x27;ShouldProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 7,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function New-YtDlpProcess {\n&quot;,
+        &quot;Offset&quot;: 198
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 7,
+        &quot;ColumnNumber&quot;: 26,
+        &quot;Line&quot;: &quot;function New-YtDlpProcess {\n&quot;,
+        &quot;Offset&quot;: 214
+      },
+      &quot;StartLineNumber&quot;: 7,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 7,
+      &quot;EndColumnNumber&quot;: 26,
+      &quot;Text&quot;: &quot;New-YtDlpProcess&quot;,
+      &quot;StartOffset&quot;: 198,
+      &quot;EndOffset&quot;: 214
+    },
+    &quot;RuleName&quot;: &quot;PSUseShouldProcessForStateChangingFunctions&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderProcess.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 7,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;Function &#x27;Stop-YtDlpProcess&#x27; has verb that could change system state. Therefore, the function has to support &#x27;ShouldProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 28,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Stop-YtDlpProcess {\n&quot;,
+        &quot;Offset&quot;: 1047
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 28,
+        &quot;ColumnNumber&quot;: 27,
+        &quot;Line&quot;: &quot;function Stop-YtDlpProcess {\n&quot;,
+        &quot;Offset&quot;: 1064
+      },
+      &quot;StartLineNumber&quot;: 28,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 28,
+      &quot;EndColumnNumber&quot;: 27,
+      &quot;Text&quot;: &quot;Stop-YtDlpProcess&quot;,
+      &quot;StartOffset&quot;: 1047,
+      &quot;EndOffset&quot;: 1064
+    },
+    &quot;RuleName&quot;: &quot;PSUseShouldProcessForStateChangingFunctions&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderProcess.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 28,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;New-YtDlpProcess&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 7,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function New-YtDlpProcess {\n&quot;,
+        &quot;Offset&quot;: 198
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 7,
+        &quot;ColumnNumber&quot;: 26,
+        &quot;Line&quot;: &quot;function New-YtDlpProcess {\n&quot;,
+        &quot;Offset&quot;: 214
+      },
+      &quot;StartLineNumber&quot;: 7,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 7,
+      &quot;EndColumnNumber&quot;: 26,
+      &quot;Text&quot;: &quot;New-YtDlpProcess&quot;,
+      &quot;StartOffset&quot;: 198,
+      &quot;EndOffset&quot;: 214
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;DownloaderProcess.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 7,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 7,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER BinaryPath\r\nParameter description\r\n\r\n.PARAMETER URL\r\nParameter description\r\n\r\n.PARAMETER TargetFolder\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER BinaryPath&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER URL&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER TargetFolder&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 7,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 7,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 7,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Stop-YtDlpProcess&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 28,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Stop-YtDlpProcess {\n&quot;,
+        &quot;Offset&quot;: 1047
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;LineNumber&quot;: 28,
+        &quot;ColumnNumber&quot;: 27,
+        &quot;Line&quot;: &quot;function Stop-YtDlpProcess {\n&quot;,
+        &quot;Offset&quot;: 1064
+      },
+      &quot;StartLineNumber&quot;: 28,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 28,
+      &quot;EndColumnNumber&quot;: 27,
+      &quot;Text&quot;: &quot;Stop-YtDlpProcess&quot;,
+      &quot;StartOffset&quot;: 1047,
+      &quot;EndOffset&quot;: 1064
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;DownloaderProcess.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderProcess.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 28,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 28,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 28,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 28,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 28,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The Variable &#x27;sender&#x27; is an automatic variable that is built into PowerShell, assigning to it might have undesired side effects. If assignment is not by design, please use a different name.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 15,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 623
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 22,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 630
+      },
+      &quot;StartLineNumber&quot;: 15,
+      &quot;StartColumnNumber&quot;: 15,
+      &quot;EndLineNumber&quot;: 15,
+      &quot;EndColumnNumber&quot;: 22,
+      &quot;Text&quot;: &quot;$sender&quot;,
+      &quot;StartOffset&quot;: 623,
+      &quot;EndOffset&quot;: 630
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidAssignmentToAutomaticVariable&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;sender&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 15,
+    &quot;Column&quot;: 15
+  },
+  {
+    &quot;Message&quot;: &quot;The Variable &#x27;event&#x27; is an automatic variable that is built into PowerShell, assigning to it might have undesired side effects. If assignment is not by design, please use a different name.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 24,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 632
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 30,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 638
+      },
+      &quot;StartLineNumber&quot;: 15,
+      &quot;StartColumnNumber&quot;: 24,
+      &quot;EndLineNumber&quot;: 15,
+      &quot;EndColumnNumber&quot;: 30,
+      &quot;Text&quot;: &quot;$event&quot;,
+      &quot;StartOffset&quot;: 632,
+      &quot;EndOffset&quot;: 638
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidAssignmentToAutomaticVariable&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;event&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 15,
+    &quot;Column&quot;: 24
+  },
+  {
+    &quot;Message&quot;: &quot;The Variable &#x27;sender&#x27; is an automatic variable that is built into PowerShell, assigning to it might have undesired side effects. If assignment is not by design, please use a different name.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 23,
+        &quot;ColumnNumber&quot;: 15,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 887
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 23,
+        &quot;ColumnNumber&quot;: 22,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 894
+      },
+      &quot;StartLineNumber&quot;: 23,
+      &quot;StartColumnNumber&quot;: 15,
+      &quot;EndLineNumber&quot;: 23,
+      &quot;EndColumnNumber&quot;: 22,
+      &quot;Text&quot;: &quot;$sender&quot;,
+      &quot;StartOffset&quot;: 887,
+      &quot;EndOffset&quot;: 894
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidAssignmentToAutomaticVariable&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;sender&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 23,
+    &quot;Column&quot;: 15
+  },
+  {
+    &quot;Message&quot;: &quot;The Variable &#x27;event&#x27; is an automatic variable that is built into PowerShell, assigning to it might have undesired side effects. If assignment is not by design, please use a different name.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 23,
+        &quot;ColumnNumber&quot;: 24,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 896
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 23,
+        &quot;ColumnNumber&quot;: 30,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 902
+      },
+      &quot;StartLineNumber&quot;: 23,
+      &quot;StartColumnNumber&quot;: 24,
+      &quot;EndLineNumber&quot;: 23,
+      &quot;EndColumnNumber&quot;: 30,
+      &quot;Text&quot;: &quot;$event&quot;,
+      &quot;StartOffset&quot;: 896,
+      &quot;EndOffset&quot;: 902
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidAssignmentToAutomaticVariable&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;event&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 23,
+    &quot;Column&quot;: 24
+  },
+  {
+    &quot;Message&quot;: &quot;The Variable &#x27;sender&#x27; is an automatic variable that is built into PowerShell, assigning to it might have undesired side effects. If assignment is not by design, please use a different name.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 15,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 1126
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 22,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 1133
+      },
+      &quot;StartLineNumber&quot;: 31,
+      &quot;StartColumnNumber&quot;: 15,
+      &quot;EndLineNumber&quot;: 31,
+      &quot;EndColumnNumber&quot;: 22,
+      &quot;Text&quot;: &quot;$sender&quot;,
+      &quot;StartOffset&quot;: 1126,
+      &quot;EndOffset&quot;: 1133
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidAssignmentToAutomaticVariable&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;sender&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 31,
+    &quot;Column&quot;: 15
+  },
+  {
+    &quot;Message&quot;: &quot;The Variable &#x27;event&#x27; is an automatic variable that is built into PowerShell, assigning to it might have undesired side effects. If assignment is not by design, please use a different name.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 24,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 1135
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 30,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 1141
+      },
+      &quot;StartLineNumber&quot;: 31,
+      &quot;StartColumnNumber&quot;: 24,
+      &quot;EndLineNumber&quot;: 31,
+      &quot;EndColumnNumber&quot;: 30,
+      &quot;Text&quot;: &quot;$event&quot;,
+      &quot;StartOffset&quot;: 1135,
+      &quot;EndOffset&quot;: 1141
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidAssignmentToAutomaticVariable&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;event&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 31,
+    &quot;Column&quot;: 24
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:ActiveDownloadProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 9,
+        &quot;ColumnNumber&quot;: 5,
+        &quot;Line&quot;: &quot;    $global:ActiveDownloadProcess = $Process\n&quot;,
+        &quot;Offset&quot;: 318
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 9,
+        &quot;ColumnNumber&quot;: 34,
+        &quot;Line&quot;: &quot;    $global:ActiveDownloadProcess = $Process\n&quot;,
+        &quot;Offset&quot;: 347
+      },
+      &quot;StartLineNumber&quot;: 9,
+      &quot;StartColumnNumber&quot;: 5,
+      &quot;EndLineNumber&quot;: 9,
+      &quot;EndColumnNumber&quot;: 34,
+      &quot;Text&quot;: &quot;$global:ActiveDownloadProcess&quot;,
+      &quot;StartOffset&quot;: 318,
+      &quot;EndOffset&quot;: 347
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:ActiveDownloadProcess&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 9,
+    &quot;Column&quot;: 5
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:ActiveDownloadProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 55,
+        &quot;ColumnNumber&quot;: 13,
+        &quot;Line&quot;: &quot;        if ($global:ActiveDownloadProcess -eq $Process) { $global:ActiveDownloadProcess = $null }\n&quot;,
+        &quot;Offset&quot;: 1795
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 55,
+        &quot;ColumnNumber&quot;: 42,
+        &quot;Line&quot;: &quot;        if ($global:ActiveDownloadProcess -eq $Process) { $global:ActiveDownloadProcess = $null }\n&quot;,
+        &quot;Offset&quot;: 1824
+      },
+      &quot;StartLineNumber&quot;: 55,
+      &quot;StartColumnNumber&quot;: 13,
+      &quot;EndLineNumber&quot;: 55,
+      &quot;EndColumnNumber&quot;: 42,
+      &quot;Text&quot;: &quot;$global:ActiveDownloadProcess&quot;,
+      &quot;StartOffset&quot;: 1795,
+      &quot;EndOffset&quot;: 1824
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:ActiveDownloadProcess&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 55,
+    &quot;Column&quot;: 13
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:ActiveDownloadProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 55,
+        &quot;ColumnNumber&quot;: 59,
+        &quot;Line&quot;: &quot;        if ($global:ActiveDownloadProcess -eq $Process) { $global:ActiveDownloadProcess = $null }\n&quot;,
+        &quot;Offset&quot;: 1841
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 55,
+        &quot;ColumnNumber&quot;: 88,
+        &quot;Line&quot;: &quot;        if ($global:ActiveDownloadProcess -eq $Process) { $global:ActiveDownloadProcess = $null }\n&quot;,
+        &quot;Offset&quot;: 1870
+      },
+      &quot;StartLineNumber&quot;: 55,
+      &quot;StartColumnNumber&quot;: 59,
+      &quot;EndLineNumber&quot;: 55,
+      &quot;EndColumnNumber&quot;: 88,
+      &quot;Text&quot;: &quot;$global:ActiveDownloadProcess&quot;,
+      &quot;StartOffset&quot;: 1841,
+      &quot;EndOffset&quot;: 1870
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:ActiveDownloadProcess&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 55,
+    &quot;Column&quot;: 59
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Invoke-DownloadWorker&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Invoke-DownloadWorker {\n&quot;,
+        &quot;Offset&quot;: 91
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 31,
+        &quot;Line&quot;: &quot;function Invoke-DownloadWorker {\n&quot;,
+        &quot;Offset&quot;: 112
+      },
+      &quot;StartLineNumber&quot;: 3,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 3,
+      &quot;EndColumnNumber&quot;: 31,
+      &quot;Text&quot;: &quot;Invoke-DownloadWorker&quot;,
+      &quot;StartOffset&quot;: 91,
+      &quot;EndOffset&quot;: 112
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 3,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 3,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER Process\r\nParameter description\r\n\r\n.PARAMETER UI\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Process&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER UI&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 3,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;Function &#x27;Update-DownloadProgress&#x27; has verb that could change system state. Therefore, the function has to support &#x27;ShouldProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 60,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Update-DownloadProgress {\n&quot;,
+        &quot;Offset&quot;: 1926
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 60,
+        &quot;ColumnNumber&quot;: 33,
+        &quot;Line&quot;: &quot;function Update-DownloadProgress {\n&quot;,
+        &quot;Offset&quot;: 1949
+      },
+      &quot;StartLineNumber&quot;: 60,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 60,
+      &quot;EndColumnNumber&quot;: 33,
+      &quot;Text&quot;: &quot;Update-DownloadProgress&quot;,
+      &quot;StartOffset&quot;: 1926,
+      &quot;EndOffset&quot;: 1949
+    },
+    &quot;RuleName&quot;: &quot;PSUseShouldProcessForStateChangingFunctions&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 60,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The parameter &#x27;sender&#x27; has been declared but not used.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 15,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 623
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 15,
+        &quot;ColumnNumber&quot;: 22,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 630
+      },
+      &quot;StartLineNumber&quot;: 15,
+      &quot;StartColumnNumber&quot;: 15,
+      &quot;EndLineNumber&quot;: 15,
+      &quot;EndColumnNumber&quot;: 22,
+      &quot;Text&quot;: &quot;$sender&quot;,
+      &quot;StartOffset&quot;: 623,
+      &quot;EndOffset&quot;: 630
+    },
+    &quot;RuleName&quot;: &quot;PSReviewUnusedParameter&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;sender&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 15,
+    &quot;Column&quot;: 15
+  },
+  {
+    &quot;Message&quot;: &quot;The parameter &#x27;sender&#x27; has been declared but not used.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 23,
+        &quot;ColumnNumber&quot;: 15,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 887
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 23,
+        &quot;ColumnNumber&quot;: 22,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 894
+      },
+      &quot;StartLineNumber&quot;: 23,
+      &quot;StartColumnNumber&quot;: 15,
+      &quot;EndLineNumber&quot;: 23,
+      &quot;EndColumnNumber&quot;: 22,
+      &quot;Text&quot;: &quot;$sender&quot;,
+      &quot;StartOffset&quot;: 887,
+      &quot;EndOffset&quot;: 894
+    },
+    &quot;RuleName&quot;: &quot;PSReviewUnusedParameter&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;sender&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 23,
+    &quot;Column&quot;: 15
+  },
+  {
+    &quot;Message&quot;: &quot;The parameter &#x27;sender&#x27; has been declared but not used.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 15,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 1126
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 22,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 1133
+      },
+      &quot;StartLineNumber&quot;: 31,
+      &quot;StartColumnNumber&quot;: 15,
+      &quot;EndLineNumber&quot;: 31,
+      &quot;EndColumnNumber&quot;: 22,
+      &quot;Text&quot;: &quot;$sender&quot;,
+      &quot;StartOffset&quot;: 1126,
+      &quot;EndOffset&quot;: 1133
+    },
+    &quot;RuleName&quot;: &quot;PSReviewUnusedParameter&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;sender&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 31,
+    &quot;Column&quot;: 15
+  },
+  {
+    &quot;Message&quot;: &quot;The parameter &#x27;event&#x27; has been declared but not used.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 24,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 1135
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+        &quot;LineNumber&quot;: 31,
+        &quot;ColumnNumber&quot;: 30,
+        &quot;Line&quot;: &quot;        param($sender, $event)\n&quot;,
+        &quot;Offset&quot;: 1141
+      },
+      &quot;StartLineNumber&quot;: 31,
+      &quot;StartColumnNumber&quot;: 24,
+      &quot;EndLineNumber&quot;: 31,
+      &quot;EndColumnNumber&quot;: 30,
+      &quot;Text&quot;: &quot;$event&quot;,
+      &quot;StartOffset&quot;: 1135,
+      &quot;EndOffset&quot;: 1141
+    },
+    &quot;RuleName&quot;: &quot;PSReviewUnusedParameter&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;DownloaderWorker.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\DownloaderWorker.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;event&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 31,
+    &quot;Column&quot;: 24
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Register-Link2MP4Events&#x27; uses a plural noun. A singular noun should be used instead.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Register-Link2MP4Events {\n&quot;,
+        &quot;Offset&quot;: 68
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 33,
+        &quot;Line&quot;: &quot;function Register-Link2MP4Events {\n&quot;,
+        &quot;Offset&quot;: 91
+      },
+      &quot;StartLineNumber&quot;: 3,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 3,
+      &quot;EndColumnNumber&quot;: 33,
+      &quot;Text&quot;: &quot;Register-Link2MP4Events&quot;,
+      &quot;StartOffset&quot;: 68,
+      &quot;EndOffset&quot;: 91
+    },
+    &quot;RuleName&quot;: &quot;PSUseSingularNouns&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Events.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;Register-Link2MP4Events&quot;,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+        &quot;Description&quot;: &quot;Singularized correction of &#x27;Register-Link2MP4Events&#x27;&quot;,
+        &quot;StartLineNumber&quot;: 3,
+        &quot;StartColumnNumber&quot;: 10,
+        &quot;EndLineNumber&quot;: 3,
+        &quot;EndColumnNumber&quot;: 33,
+        &quot;Text&quot;: &quot;Register-Link2MP4Event&quot;,
+        &quot;Lines&quot;: [
+          &quot;Register-Link2MP4Event&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 10
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 33
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 3,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Register-Link2MP4Events&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Register-Link2MP4Events {\n&quot;,
+        &quot;Offset&quot;: 68
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 33,
+        &quot;Line&quot;: &quot;function Register-Link2MP4Events {\n&quot;,
+        &quot;Offset&quot;: 91
+      },
+      &quot;StartLineNumber&quot;: 3,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 3,
+      &quot;EndColumnNumber&quot;: 33,
+      &quot;Text&quot;: &quot;Register-Link2MP4Events&quot;,
+      &quot;StartOffset&quot;: 68,
+      &quot;EndOffset&quot;: 91
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;Events.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Events.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 3,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 3,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER UI\r\nParameter description\r\n\r\n.PARAMETER Form\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER UI&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Form&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 3,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;Function &#x27;Update-UI&#x27; has verb that could change system state. Therefore, the function has to support &#x27;ShouldProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Update-UI {\n&quot;,
+        &quot;Offset&quot;: 67
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 19,
+        &quot;Line&quot;: &quot;function Update-UI {\n&quot;,
+        &quot;Offset&quot;: 76
+      },
+      &quot;StartLineNumber&quot;: 3,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 3,
+      &quot;EndColumnNumber&quot;: 19,
+      &quot;Text&quot;: &quot;Update-UI&quot;,
+      &quot;StartOffset&quot;: 67,
+      &quot;EndOffset&quot;: 76
+    },
+    &quot;RuleName&quot;: &quot;PSUseShouldProcessForStateChangingFunctions&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Helpers.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 3,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Update-UI&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Update-UI {\n&quot;,
+        &quot;Offset&quot;: 67
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 19,
+        &quot;Line&quot;: &quot;function Update-UI {\n&quot;,
+        &quot;Offset&quot;: 76
+      },
+      &quot;StartLineNumber&quot;: 3,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 3,
+      &quot;EndColumnNumber&quot;: 19,
+      &quot;Text&quot;: &quot;Update-UI&quot;,
+      &quot;StartOffset&quot;: 67,
+      &quot;EndOffset&quot;: 76
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;Helpers.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 3,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 3,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER Form\r\nParameter description\r\n\r\n.PARAMETER Action\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Form&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Action&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 3,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 3,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Show-UIMessage&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+        &quot;LineNumber&quot;: 20,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Show-UIMessage {\n&quot;,
+        &quot;Offset&quot;: 639
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+        &quot;LineNumber&quot;: 20,
+        &quot;ColumnNumber&quot;: 24,
+        &quot;Line&quot;: &quot;function Show-UIMessage {\n&quot;,
+        &quot;Offset&quot;: 653
+      },
+      &quot;StartLineNumber&quot;: 20,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 20,
+      &quot;EndColumnNumber&quot;: 24,
+      &quot;Text&quot;: &quot;Show-UIMessage&quot;,
+      &quot;StartOffset&quot;: 639,
+      &quot;EndOffset&quot;: 653
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;Helpers.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Helpers.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 20,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 20,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER Text\r\nParameter description\r\n\r\n.PARAMETER Title\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Text&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Title&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 20,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 20,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 20,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:CurrentTheme&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 54,
+        &quot;Line&quot;: &quot;if (-not (Test-Path Variable:global:CurrentTheme)) { $global:CurrentTheme = \&quot;Dark\&quot; }\n&quot;,
+        &quot;Offset&quot;: 91
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 3,
+        &quot;ColumnNumber&quot;: 74,
+        &quot;Line&quot;: &quot;if (-not (Test-Path Variable:global:CurrentTheme)) { $global:CurrentTheme = \&quot;Dark\&quot; }\n&quot;,
+        &quot;Offset&quot;: 111
+      },
+      &quot;StartLineNumber&quot;: 3,
+      &quot;StartColumnNumber&quot;: 54,
+      &quot;EndLineNumber&quot;: 3,
+      &quot;EndColumnNumber&quot;: 74,
+      &quot;Text&quot;: &quot;$global:CurrentTheme&quot;,
+      &quot;StartOffset&quot;: 91,
+      &quot;EndOffset&quot;: 111
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Theme.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:CurrentTheme&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 3,
+    &quot;Column&quot;: 54
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:CurrentTheme&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 5,
+        &quot;ColumnNumber&quot;: 29,
+        &quot;Line&quot;: &quot;function Get-Theme { return $global:CurrentTheme }\n&quot;,
+        &quot;Offset&quot;: 152
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 5,
+        &quot;ColumnNumber&quot;: 49,
+        &quot;Line&quot;: &quot;function Get-Theme { return $global:CurrentTheme }\n&quot;,
+        &quot;Offset&quot;: 172
+      },
+      &quot;StartLineNumber&quot;: 5,
+      &quot;StartColumnNumber&quot;: 29,
+      &quot;EndLineNumber&quot;: 5,
+      &quot;EndColumnNumber&quot;: 49,
+      &quot;Text&quot;: &quot;$global:CurrentTheme&quot;,
+      &quot;StartOffset&quot;: 152,
+      &quot;EndOffset&quot;: 172
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Theme.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:CurrentTheme&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 5,
+    &quot;Column&quot;: 29
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:CurrentTheme&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 48,
+        &quot;Line&quot;: &quot;function Set-Theme { param([string]$ThemeName) $global:CurrentTheme = $ThemeName }\n&quot;,
+        &quot;Offset&quot;: 222
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 68,
+        &quot;Line&quot;: &quot;function Set-Theme { param([string]$ThemeName) $global:CurrentTheme = $ThemeName }\n&quot;,
+        &quot;Offset&quot;: 242
+      },
+      &quot;StartLineNumber&quot;: 6,
+      &quot;StartColumnNumber&quot;: 48,
+      &quot;EndLineNumber&quot;: 6,
+      &quot;EndColumnNumber&quot;: 68,
+      &quot;Text&quot;: &quot;$global:CurrentTheme&quot;,
+      &quot;StartOffset&quot;: 222,
+      &quot;EndOffset&quot;: 242
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Theme.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:CurrentTheme&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 6,
+    &quot;Column&quot;: 48
+  },
+  {
+    &quot;Message&quot;: &quot;Found global variable &#x27;global:CurrentTheme&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 12,
+        &quot;ColumnNumber&quot;: 9,
+        &quot;Line&quot;: &quot;    if ($global:CurrentTheme -eq \&quot;Dark\&quot;) {\n&quot;,
+        &quot;Offset&quot;: 367
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 12,
+        &quot;ColumnNumber&quot;: 29,
+        &quot;Line&quot;: &quot;    if ($global:CurrentTheme -eq \&quot;Dark\&quot;) {\n&quot;,
+        &quot;Offset&quot;: 387
+      },
+      &quot;StartLineNumber&quot;: 12,
+      &quot;StartColumnNumber&quot;: 9,
+      &quot;EndLineNumber&quot;: 12,
+      &quot;EndColumnNumber&quot;: 29,
+      &quot;Text&quot;: &quot;$global:CurrentTheme&quot;,
+      &quot;StartOffset&quot;: 367,
+      &quot;EndOffset&quot;: 387
+    },
+    &quot;RuleName&quot;: &quot;PSAvoidGlobalVars&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Theme.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: &quot;global:CurrentTheme&quot;,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 12,
+    &quot;Column&quot;: 9
+  },
+  {
+    &quot;Message&quot;: &quot;Function &#x27;Set-Theme&#x27; has verb that could change system state. Therefore, the function has to support &#x27;ShouldProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Set-Theme { param([string]$ThemeName) $global:CurrentTheme = $ThemeName }\n&quot;,
+        &quot;Offset&quot;: 184
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 19,
+        &quot;Line&quot;: &quot;function Set-Theme { param([string]$ThemeName) $global:CurrentTheme = $ThemeName }\n&quot;,
+        &quot;Offset&quot;: 193
+      },
+      &quot;StartLineNumber&quot;: 6,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 6,
+      &quot;EndColumnNumber&quot;: 19,
+      &quot;Text&quot;: &quot;Set-Theme&quot;,
+      &quot;StartOffset&quot;: 184,
+      &quot;EndOffset&quot;: 193
+    },
+    &quot;RuleName&quot;: &quot;PSUseShouldProcessForStateChangingFunctions&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Theme.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 6,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Apply-Theme&#x27; uses an unapproved verb.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 8,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Apply-Theme {\n&quot;,
+        &quot;Offset&quot;: 268
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 8,
+        &quot;ColumnNumber&quot;: 21,
+        &quot;Line&quot;: &quot;function Apply-Theme {\n&quot;,
+        &quot;Offset&quot;: 279
+      },
+      &quot;StartLineNumber&quot;: 8,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 8,
+      &quot;EndColumnNumber&quot;: 21,
+      &quot;Text&quot;: &quot;Apply-Theme&quot;,
+      &quot;StartOffset&quot;: 268,
+      &quot;EndOffset&quot;: 279
+    },
+    &quot;RuleName&quot;: &quot;PSUseApprovedVerbs&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;Theme.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 8,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Get-Theme&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 5,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Get-Theme { return $global:CurrentTheme }\n&quot;,
+        &quot;Offset&quot;: 133
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 5,
+        &quot;ColumnNumber&quot;: 19,
+        &quot;Line&quot;: &quot;function Get-Theme { return $global:CurrentTheme }\n&quot;,
+        &quot;Offset&quot;: 142
+      },
+      &quot;StartLineNumber&quot;: 5,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 5,
+      &quot;EndColumnNumber&quot;: 19,
+      &quot;Text&quot;: &quot;Get-Theme&quot;,
+      &quot;StartOffset&quot;: 133,
+      &quot;EndOffset&quot;: 142
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;Theme.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 5,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 5,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 5,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 5,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 5,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Set-Theme&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Set-Theme { param([string]$ThemeName) $global:CurrentTheme = $ThemeName }\n&quot;,
+        &quot;Offset&quot;: 184
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 19,
+        &quot;Line&quot;: &quot;function Set-Theme { param([string]$ThemeName) $global:CurrentTheme = $ThemeName }\n&quot;,
+        &quot;Offset&quot;: 193
+      },
+      &quot;StartLineNumber&quot;: 6,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 6,
+      &quot;EndColumnNumber&quot;: 19,
+      &quot;Text&quot;: &quot;Set-Theme&quot;,
+      &quot;StartOffset&quot;: 184,
+      &quot;EndOffset&quot;: 193
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;Theme.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 6,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 6,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER ThemeName\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER ThemeName&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 6,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 6,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 6,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;Apply-Theme&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 8,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function Apply-Theme {\n&quot;,
+        &quot;Offset&quot;: 268
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;LineNumber&quot;: 8,
+        &quot;ColumnNumber&quot;: 21,
+        &quot;Line&quot;: &quot;function Apply-Theme {\n&quot;,
+        &quot;Offset&quot;: 279
+      },
+      &quot;StartLineNumber&quot;: 8,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 8,
+      &quot;EndColumnNumber&quot;: 21,
+      &quot;Text&quot;: &quot;Apply-Theme&quot;,
+      &quot;StartOffset&quot;: 268,
+      &quot;EndOffset&quot;: 279
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;Theme.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\Theme.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 8,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 8,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.PARAMETER Form\r\nParameter description\r\n\r\n.PARAMETER UI\r\nParameter description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER Form&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.PARAMETER UI&quot;,
+          &quot;Parameter description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 8,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 8,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 8,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;Function &#x27;New-Link2MP4UI&#x27; has verb that could change system state. Therefore, the function has to support &#x27;ShouldProcess&#x27;.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\UI.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\UI.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function New-Link2MP4UI {\n&quot;,
+        &quot;Offset&quot;: 138
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\UI.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 24,
+        &quot;Line&quot;: &quot;function New-Link2MP4UI {\n&quot;,
+        &quot;Offset&quot;: 152
+      },
+      &quot;StartLineNumber&quot;: 6,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 6,
+      &quot;EndColumnNumber&quot;: 24,
+      &quot;Text&quot;: &quot;New-Link2MP4UI&quot;,
+      &quot;StartOffset&quot;: 138,
+      &quot;EndOffset&quot;: 152
+    },
+    &quot;RuleName&quot;: &quot;PSUseShouldProcessForStateChangingFunctions&quot;,
+    &quot;Severity&quot;: 1,
+    &quot;ScriptName&quot;: &quot;UI.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\UI.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: null,
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 6,
+    &quot;Column&quot;: 10
+  },
+  {
+    &quot;Message&quot;: &quot;The cmdlet &#x27;New-Link2MP4UI&#x27; does not have a help comment.&quot;,
+    &quot;Extent&quot;: {
+      &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\UI.psm1&quot;,
+      &quot;StartScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\UI.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 10,
+        &quot;Line&quot;: &quot;function New-Link2MP4UI {\n&quot;,
+        &quot;Offset&quot;: 138
+      },
+      &quot;EndScriptPosition&quot;: {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\UI.psm1&quot;,
+        &quot;LineNumber&quot;: 6,
+        &quot;ColumnNumber&quot;: 24,
+        &quot;Line&quot;: &quot;function New-Link2MP4UI {\n&quot;,
+        &quot;Offset&quot;: 152
+      },
+      &quot;StartLineNumber&quot;: 6,
+      &quot;StartColumnNumber&quot;: 10,
+      &quot;EndLineNumber&quot;: 6,
+      &quot;EndColumnNumber&quot;: 24,
+      &quot;Text&quot;: &quot;New-Link2MP4UI&quot;,
+      &quot;StartOffset&quot;: 138,
+      &quot;EndOffset&quot;: 152
+    },
+    &quot;RuleName&quot;: &quot;PSProvideCommentHelp&quot;,
+    &quot;Severity&quot;: 0,
+    &quot;ScriptName&quot;: &quot;UI.psm1&quot;,
+    &quot;ScriptPath&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\UI.psm1&quot;,
+    &quot;RuleSuppressionID&quot;: null,
+    &quot;SuggestedCorrections&quot;: [
+      {
+        &quot;File&quot;: &quot;C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4\\Modules\\UI.psm1&quot;,
+        &quot;Description&quot;: null,
+        &quot;StartLineNumber&quot;: 6,
+        &quot;StartColumnNumber&quot;: 1,
+        &quot;EndLineNumber&quot;: 6,
+        &quot;EndColumnNumber&quot;: 1,
+        &quot;Text&quot;: &quot;&lt;#\r\n.SYNOPSIS\r\nShort description\r\n\r\n.DESCRIPTION\r\nLong description\r\n\r\n.EXAMPLE\r\nAn example\r\n\r\n.NOTES\r\nGeneral notes\r\n#&gt;\r\n&quot;,
+        &quot;Lines&quot;: [
+          &quot;&lt;#&quot;,
+          &quot;.SYNOPSIS&quot;,
+          &quot;Short description&quot;,
+          &quot;&quot;,
+          &quot;.DESCRIPTION&quot;,
+          &quot;Long description&quot;,
+          &quot;&quot;,
+          &quot;.EXAMPLE&quot;,
+          &quot;An example&quot;,
+          &quot;&quot;,
+          &quot;.NOTES&quot;,
+          &quot;General notes&quot;,
+          &quot;#&gt;&quot;,
+          &quot;&quot;
+        ],
+        &quot;Start&quot;: {
+          &quot;Line&quot;: 6,
+          &quot;Column&quot;: 1
+        },
+        &quot;End&quot;: {
+          &quot;Line&quot;: 6,
+          &quot;Column&quot;: 1
+        }
+      }
+    ],
+    &quot;IsSuppressed&quot;: false,
+    &quot;Line&quot;: 6,
+    &quot;Column&quot;: 10
+  }
+]
+</pre></div>
+<script>
+new Chart(document.getElementById('projectChart'), {
+    type: 'bar',
+    data: {
+        labels: ["C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-13-06\\fixed\\Link2MP4"],
+        datasets: [
+            { label: 'Ruff', data: [0], backgroundColor: '#4285F4' },
+            { label: 'Bandit', data: [0], backgroundColor: '#DB4437' },
+            { label: 'Semgrep', data: [0], backgroundColor: '#F4B400' }
+        ]
+    },
+    options: { responsive: true }
+});
+</script>
+
+</body></html>

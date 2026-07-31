@@ -1,0 +1,7 @@
+fastapi
+pydantic
+uvicorn
+flask
+ruff
+bandit
+semgrep

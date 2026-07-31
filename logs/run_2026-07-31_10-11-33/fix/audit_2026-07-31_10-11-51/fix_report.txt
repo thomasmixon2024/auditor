@@ -1,0 +1,6 @@
+=== AUTO-FIX REPORT ===
+
+PROJECT: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4
+Custom fixers output:
+PowerShell fixes applied to C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4
+

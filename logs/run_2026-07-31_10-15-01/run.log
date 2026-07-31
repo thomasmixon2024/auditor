@@ -1,0 +1,98 @@
+**********************
+PowerShell transcript start
+Start time: 20260731101501
+Username: DESKTOP-II9HBMQ\Thomas
+RunAs User: DESKTOP-II9HBMQ\Thomas
+Configuration Name: 
+Machine: DESKTOP-II9HBMQ (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.4.0_x64__8wekyb3d8bbwe\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\Thomas\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2025.4.0' -BundledModulesPath 'c:\Users\Thomas\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2025.4.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Warning' -LogPath 'c:\Users\Thomas\AppData\Roaming\Code\logs\20260731T100652\window1\exthost\ms-vscode.powershell' -SessionDetailsPath 'c:\Users\Thomas\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-12792-903788.json' -FeatureFlags @() 
+Process ID: 5952
+PSVersion: 7.6.4
+PSEdition: Core
+GitCommitId: 7.6.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Auditor full run - 2026-07-31_10-15-01
+Target path: target_project
+Severity:    all
+DryRun:      False
+SkipFix:     False
+
+
+==> Setting up Python environment
+    OK:   venv ready: C:\Users\Thomas\Desktop\auditor\.venv\Scripts\python.exe
+Resolved target: C:\Users\Thomas\Desktop\auditor\target_project
+
+==> Backing up target
+    OK:   Backed up 10 file(s) to C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\backup
+
+==> Running baseline audit (no fixers) against the original
+
+    OK:   Baseline audit complete: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\before
+
+==> Creating a working copy to fix (original is never touched by fixers)
+    OK:   Working copy ready: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed
+
+==> Running auto-fixers against the working copy
+
+    OK:   Fix pass complete
+
+==> Running post-fix audit against the working copy
+
+    OK:   Post-fix audit complete: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\after
+
+==> Verifying the fix didn't break anything
+    FAIL: Parse errors found in the fixed output (see summary)
+
+Findings before -> after (low / medium / high):
+  low:    0 -> 0
+  medium: 0 -> 0
+  high:   0 -> 0
+
+VERIFICATION: FAILED (19 issue(s))
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\CrashLogs.psm1:16 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\CrashLogs.psm1:28 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\CrashLogs.psm1:37 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\Downloader.psm1:8 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\Downloader.psm1:17 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\Downloader.psm1:79 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\DownloaderConfig.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\DownloaderConfig.psm1:15 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\DownloaderProcess.psm1:8 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\DownloaderProcess.psm1:30 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\DownloaderWorker.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\DownloaderWorker.psm1:62 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\Events.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\Helpers.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\Helpers.psm1:22 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\Theme.psm1:6 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\Theme.psm1:8 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\Theme.psm1:11 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed\Link2MP4\Modules\UI.psm1:7 - Unexpected attribute 'CmdletBinding'.
+
+==> Finalizing
+    FAIL: Verification failed - original target left untouched.
+
+Original was NOT modified. Review the fixed copy manually:
+  C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed
+Backup of the original (kept regardless of outcome):
+  C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\backup
+
+Reports:
+  Baseline (before): C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\before
+  Post-fix (after):  C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\after
+  Fixed copy:        C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-15-01\fixed
+**********************
+PowerShell transcript end
+End time: 20260731101522
+**********************

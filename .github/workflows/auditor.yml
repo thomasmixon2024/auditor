@@ -1,0 +1,40 @@
+name: Auditor CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff bandit semgrep
+
+      - name: Run auditor
+        run: |
+          python scripts/run_all.py --ci --severity high
+
+      - name: Upload SARIF to GitHub Security
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: logs/latest.sarif
+
+      - name: Upload audit bundle artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-bundles
+          path: logs/

@@ -1,0 +1,9 @@
+[2026-07-30T22:25:45.179004] Audit started: bundle=C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-25-36\fix\audit_2026-07-30_22-25-45, base_path=C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-25-36\fixed, severity=all, ci_mode=False, fix_mode=True
+[2026-07-30T22:25:45.179004] Discovering projects in C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-25-36\fixed
+[2026-07-30T22:25:45.180007] Found projects: ['C:\\Users\\Thomas\\Desktop\\auditor\\logs\\run_2026-07-30_22-25-36\\fixed\\Link2MP4']
+[2026-07-30T22:25:45.180007] Scanning project: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-25-36\fixed\Link2MP4
+[2026-07-30T22:25:45.180007] Running PSScriptAnalyzer on C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-25-36\fixed\Link2MP4
+[2026-07-30T22:25:47.668708] PSScriptAnalyzer completed
+[2026-07-30T22:25:50.047610] Auto-fix mode enabled for C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-25-36\fixed\Link2MP4
+[2026-07-30T22:25:50.048369] Running ps_fixer.ps1 custom fixers on C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-25-36\fixed\Link2MP4
+[2026-07-30T22:25:50.801923] Custom fixers completed

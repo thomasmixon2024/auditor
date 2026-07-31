@@ -1,0 +1,43 @@
+Auditor full run - 2026-07-31_10-11-33
+Target path: target_project
+Severity:    all
+DryRun:      False
+SkipFix:     False
+
+Resolved target: C:\Users\Thomas\Desktop\auditor\target_project
+
+Findings before -> after (low / medium / high):
+  low:    0 -> 0
+  medium: 0 -> 0
+  high:   0 -> 0
+
+VERIFICATION: FAILED (19 issue(s))
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\CrashLogs.psm1:16 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\CrashLogs.psm1:28 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\CrashLogs.psm1:37 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\Downloader.psm1:8 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\Downloader.psm1:17 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\Downloader.psm1:79 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\DownloaderConfig.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\DownloaderConfig.psm1:15 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\DownloaderProcess.psm1:8 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\DownloaderProcess.psm1:30 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\DownloaderWorker.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\DownloaderWorker.psm1:62 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\Events.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\Helpers.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\Helpers.psm1:22 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\Theme.psm1:6 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\Theme.psm1:8 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\Theme.psm1:11 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed\Link2MP4\Modules\UI.psm1:7 - Unexpected attribute 'CmdletBinding'.
+
+Original was NOT modified. Review the fixed copy manually:
+  C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed
+Backup of the original (kept regardless of outcome):
+  C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\backup
+
+Reports:
+  Baseline (before): C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\before
+  Post-fix (after):  C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\after
+  Fixed copy:        C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-31_10-11-33\fixed

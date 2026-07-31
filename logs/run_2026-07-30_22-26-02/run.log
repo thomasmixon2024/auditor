@@ -1,0 +1,121 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260730222602
+Username: DESKTOP-II9HBMQ\Thomas
+RunAs User: DESKTOP-II9HBMQ\Thomas
+Configuration Name: 
+Machine: DESKTOP-II9HBMQ (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\run_full_audit.ps1
+Process ID: 6604
+PSVersion: 5.1.26100.8972
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8972
+BuildVersion: 10.0.26100.8972
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Auditor full run - 2026-07-30_22-26-02
+Target path: target_project
+Severity:    all
+DryRun:      False
+SkipFix:     False
+
+
+==> Setting up Python environment
+    OK:   venv ready: C:\Users\Thomas\Desktop\auditor\.venv\Scripts\python.exe
+Resolved target: C:\Users\Thomas\Desktop\auditor\target_project
+
+==> Backing up target
+    OK:   Backed up 10 file(s) to C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\backup
+
+==> Running baseline audit (no fixers) against the original
+JSON report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\before\audit_2026-07-30_22-26-04\repo
+rt.json
+SARIF report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\before\audit_2026-07-30_22-26-04\rep
+ort.sarif
+Text report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\before\audit_2026-07-30_22-26-04\repo
+rt.txt
+HTML report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\before\audit_2026-07-30_22-26-04\repo
+rt.html
+Dashboard HTML saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\before\audit_2026-07-30_22-26-04\d
+ashboard.html
+    OK:   Baseline audit complete: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\before
+
+==> Creating a working copy to fix (original is never touched by fixers)
+    OK:   Working copy ready: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed
+
+==> Running auto-fixers against the working copy
+Auto-fix report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fix\audit_2026-07-30_22-26-09\fix
+_report.txt
+JSON report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fix\audit_2026-07-30_22-26-09\report.
+json
+SARIF report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fix\audit_2026-07-30_22-26-09\report
+.sarif
+Text report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fix\audit_2026-07-30_22-26-09\report.
+txt
+HTML report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fix\audit_2026-07-30_22-26-09\report.
+html
+Dashboard HTML saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fix\audit_2026-07-30_22-26-09\dash
+board.html
+    OK:   Fix pass complete
+
+==> Running post-fix audit against the working copy
+JSON report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\after\audit_2026-07-30_22-26-15\repor
+t.json
+SARIF report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\after\audit_2026-07-30_22-26-15\repo
+rt.sarif
+Text report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\after\audit_2026-07-30_22-26-15\repor
+t.txt
+HTML report saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\after\audit_2026-07-30_22-26-15\repor
+t.html
+Dashboard HTML saved to: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\after\audit_2026-07-30_22-26-15\da
+shboard.html
+    OK:   Post-fix audit complete: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\after
+
+==> Verifying the fix didn't break anything
+    FAIL: Parse errors found in the fixed output (see summary)
+
+Findings before -> after (low / medium / high):
+  low:    0 -> 0
+  medium: 0 -> 0
+  high:   0 -> 0
+
+VERIFICATION: FAILED (19 issue(s))
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\CrashLogs.psm1:16 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\CrashLogs.psm1:28 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\CrashLogs.psm1:37 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\Downloader.psm1:8 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\Downloader.psm1:17 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\Downloader.psm1:79 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\DownloaderConfig.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\DownloaderConfig.psm1:15 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\DownloaderProcess.psm1:8 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\DownloaderProcess.psm1:30 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\DownloaderWorker.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\DownloaderWorker.psm1:62 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\Events.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\Helpers.psm1:4 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\Helpers.psm1:22 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\Theme.psm1:6 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\Theme.psm1:8 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\Theme.psm1:11 - Unexpected attribute 'CmdletBinding'.
+  - PARSE ERROR: C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed\Link2MP4\Modules\UI.psm1:7 - Unexpected attribute 'CmdletBinding'.
+
+==> Finalizing
+    FAIL: Verification failed - original target left untouched.
+
+Original was NOT modified. Review the fixed copy manually:
+  C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed
+Backup of the original (kept regardless of outcome):
+  C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\backup
+
+Reports:
+  Baseline (before): C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\before
+  Post-fix (after):  C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\after
+  Fixed copy:        C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-26-02\fixed
+**********************
+Windows PowerShell transcript end
+End time: 20260730222625
+**********************

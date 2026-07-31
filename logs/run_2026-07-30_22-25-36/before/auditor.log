@@ -1,0 +1,6 @@
+[2026-07-30T22:25:39.521753] Audit started: bundle=C:\Users\Thomas\Desktop\auditor\logs\run_2026-07-30_22-25-36\before\audit_2026-07-30_22-25-39, base_path=C:\Users\Thomas\Desktop\auditor\target_project, severity=all, ci_mode=False, fix_mode=False
+[2026-07-30T22:25:39.521753] Discovering projects in C:\Users\Thomas\Desktop\auditor\target_project
+[2026-07-30T22:25:39.522752] Found projects: ['C:\\Users\\Thomas\\Desktop\\auditor\\target_project\\Link2MP4']
+[2026-07-30T22:25:39.522752] Scanning project: C:\Users\Thomas\Desktop\auditor\target_project\Link2MP4
+[2026-07-30T22:25:39.522752] Running PSScriptAnalyzer on C:\Users\Thomas\Desktop\auditor\target_project\Link2MP4
+[2026-07-30T22:25:42.601884] PSScriptAnalyzer completed
